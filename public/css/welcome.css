@@ -1,0 +1,145 @@
+@media screen and (min-width: 1024px) and (min-height: 600px){
+    body{
+        background-color: rgb(252, 252, 252);
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 10%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        text-align: right;
+    }
+    @font-face {
+        font-family: title;
+        src: url(./fonts/LEMONMILK-Regular.otf);
+    }
+    .title{
+        margin: 0;
+        color: rgb(0, 128, 255);
+        font-family: title;
+        font-size: 2.5em;
+        position: absolute;
+        left: 1rem;
+        top: 1%;
+    }
+    .title span{
+        color: rgb(11, 11, 11);
+    }
+    .links li{
+        margin-left: 2em;
+        display: inline-block;
+    }
+    .links a{
+         text-decoration: none;
+         font-family: title;
+         font-size: 1.2em;
+         color:rgb(0, 128, 255);
+    }
+    .links{
+        position: absolute;
+        right: 4%;
+        top: -5%;
+    }
+    .card {
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        top: 15%;
+        left: 6%;
+        border-radius: 30px;
+        background: #f0f0f0;
+        box-shadow: 15px 15px 30px #bebebe,
+                   -15px -15px 30px #ffffff;
+                   overflow: hidden;
+                   animation: intro  3s;
+      }
+      @keyframes intro {
+        0%{
+            left: -100%;
+        }
+        100%{
+            left: 6%;
+        }
+      }
+      .description{
+        font-family: title;
+        font-size: 3.5em;
+        position: absolute;
+        top: 0em;
+        left: 0.8em;
+        text-align: center;
+        
+      }
+      .description span{
+        color:rgb(0, 128, 255); ;
+      }
+      .circle1{
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        top: 8%;
+        left: 65%;
+        border-radius: 50%;
+        background-image: url(./photos/welcome_page/driver.jpg);
+        background-position-y: -5rem;
+        background-size: cover;
+        animation: roll 2.6s
+      }
+      @keyframes roll {
+        0%{
+            left: 150%;
+        }
+        100%{
+             left: 65%;
+        }
+      }
+      .circle2{
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        border-radius: 50%;
+        background-image: url(./photos/welcome_page/security.jpg);
+        background-size: cover;
+        animation: roll2 2.7s
+      }
+      @keyframes roll2 {
+        0%{
+            left: 150%;
+        }
+        100%{
+             left: 50%;
+        }
+      }
+        .circle3{
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 59%;
+        left: 60%;
+        border-radius: 50%;
+        background-image: url(./photos/welcome_page/waiter.jpg);
+        background-size: cover;
+        animation: roll3 2.7s
+      }
+      @keyframes roll3 {
+        0%{
+            left: 150%;
+        }
+        100%{
+             left: 60%;
+        }
+      }
+
+}
