@@ -33,7 +33,7 @@
     <li><a href="{{url('/about/')}}" title="about">About</a></li>
         <li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
         <li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
-        <li><a href="{{url('/dashboard/')}}" title="dashboard">System</a></li>	
+        <li><a href="{{url('/login/')}}" title="dashboard">System</a></li>	
     </ul>
 
  <a href="#" title="sign-up" class="button button-primary cta">Apply for Job</a>

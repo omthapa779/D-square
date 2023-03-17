@@ -33,10 +33,10 @@
 
 	   <nav id="header-nav-wrap">
 			<ul class="header-main-nav">
-				<li class="current"><a href="/" title="home">Home</a></li>
-            <li><a href="{{url('/about/')}}" title="about">About</a></li>
-				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
-				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
+				<li class="current"><a href="/" title="home">Register</a></li>
+            <li><a href="{{url('/about/')}}" title="about">Upload</a></li>
+				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs Upload</a></li>
+				<li><a href="{{url('/announcement/')}}" title="announcement">Applicants</a></li>
 			</ul>
 
          <a href="{{url('/admin_page/')}}" title="sign-up" class="button button-primary cta">Dashboard</a>
@@ -51,7 +51,6 @@
 
 <br>
 <h1 class="announce_home"><a href="{{url('/announce')}}">Want to Announce? Announce Here.</a> </h1>
-hello {{Auth::user()->email}} 
 <a href="{{route('logout')}}"><button> logout</button> </a>
  <a href="{{route('register')}}"><button> register new users</button> </a>
 
