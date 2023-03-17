@@ -132,7 +132,7 @@
                         <li><a href="{{url('/jobs/')}}">Jobs</a></li>
                         <li><a href="{{url('/announcement/')}}">Announcement</a></li>
                         <li><a href="#">Apply for Job</a></li>
-                        <li><a href="{{url('/dashboard/')}}">System </a></li>
+                        <li><a href="{{url('/login/')}}">System </a></li>
                     </ul>	      		
                             
                 </div> <!-- end footer-site-links --> 

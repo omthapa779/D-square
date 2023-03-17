@@ -37,7 +37,7 @@
             <li><a href="{{url('/about/')}}" title="about">About</a></li>
 				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
 				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
-				<li><a class="smoothscroll"  href="{{url('/dashboard/')}}" title="dashboard">SYSTEM</a></li>	
+				<li><a class="smoothscroll"  href="{{url('/login/')}}" title="dashboard">SYSTEM</a></li>	
 			</ul>
 
          <a href="#" title="sign-up" class="button button-primary cta">Apply for Job</a>
@@ -277,7 +277,7 @@
                         <li><a href="{{url('/jobs/')}}">Jobs</a></li>
                         <li><a href="{{url('/announcement/')}}">Announcement</a></li>
                         <li><a href="#">Apply for Job</a></li>
-                        <li><a href="{{url('/dashboard/')}}">System</a></li>
+                        <li><a href="{{url('/login/')}}">System</a></li>
                     </ul>	      		
                             
                 </div> <!-- end footer-site-links --> 

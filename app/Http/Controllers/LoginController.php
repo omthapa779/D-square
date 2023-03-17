@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use DB;
+
 
 class LoginController extends Controller
 {
@@ -20,21 +22,21 @@ class LoginController extends Controller
 
 
     public function create_user() {
-        return view("auth.register");
+        return view("register");
     }
 
 public function store_user(Request $request) {
     $request->validate([
         'name' => ['required'],
         'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-        'roll_id' =>['required', 'integer'],
+        'role_id' =>['required', 'integer'],
         'password' => ['required', Rules\Password::defaults()],
     ]);
 
     $user = new User();
     $user->email = $request->email;
     $user->name = $request-> name;
-    $user->roll_id = $request->roll_id;
+    $user->role_id = $request->role_id;
     $user->password=Hash::make($request->password);
 
     $user->save();
@@ -44,7 +46,7 @@ public function store_user(Request $request) {
 }
 
 public function login() {
-        return view('auth.login') ;
+        return view('login') ;
 }
 public function store_login(Request $request) {
     $request->validate([
@@ -52,22 +54,23 @@ public function store_login(Request $request) {
         'password' => ['required'],
     ]);
 
-        $credentials = [
+     $credentials = [
         'email'=> $request->email,
-        'password'=> $request->password
+        'password'=> $request->password,
     ];
+       
     if(Auth::attempt($credentials)){
-        return redirect('come');
+        return redirect('/admin_page');
     }
     else{
-        return 'wrong credentials';
+        return redirect('login');
     }
 }
-public function come() {
-        return view('auth.come');
+public function admin_page() {
+        return view('adminhome');
 }
 public function logout() {
     Auth::logout();
-    return view('auth.login');
+    return view('login');
 }
 }
