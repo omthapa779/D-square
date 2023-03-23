@@ -1,0 +1,70 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #0f0f0f;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: rgb(237, 237, 237);
+  padding: 16px;
+  font-size: 1vw;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #0087cc;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+.logout_button{
+  margin: 280px 0px
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+   
+  }
+  .logout_button{
+    margin: 0px 0px
+  }
+  .sidebar a {float: left;
+    font-size: 5vw;
+  }
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+    font-size: 4vw;
+  }
+  .logout_button{
+    margin: 0px 0px;
+  }
+}

@@ -37,7 +37,7 @@
             <li><a href="{{url('/about/')}}" title="about">About</a></li>
 				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
 				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
-				<li><a class="smoothscroll"  href="{{url('/login/')}}" title="dashboard">SYSTEM</a></li>	
+				<li><a href="{{url('/login/')}}">SYSTEM</a></li>	
 			</ul>
 
          <a href="#" title="sign-up" class="button button-primary cta">Apply for Job</a>

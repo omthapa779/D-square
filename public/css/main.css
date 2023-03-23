@@ -1135,7 +1135,6 @@ h1.intro-header::before {
   z-index: 501;
 }
 
-
 /* ------------------------------------------------------------------- 
  * header logo - (_site-layout.css) 
  * ------------------------------------------------------------------- */
@@ -1270,7 +1269,7 @@ h1.intro-header::before {
   position: absolute;
   top: 0;
   right: 40px;
-}
+} 
 
 #header-nav-wrap .header-main-nav {
   display: inline-block;
