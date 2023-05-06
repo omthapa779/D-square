@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>D-Square | System Register</title>
+    <title>D-Square | Apply For Job</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('css/base.css')}}" rel="stylesheet">
     <link href="{{asset('css/vendor.css')}}" rel="stylesheet">
@@ -32,14 +32,14 @@
 
 	   <nav id="header-nav-wrap">
 			<ul class="header-main-nav">
-            <li class="current"><a href="{{url('/admin_page/')}}" title="Dashboard">DashBoard</a></li>
-            <li><a href="{{url('/jobs_upload/')}}" title="Upload_jobs">Upload Jobs</a></li>
-				<li><a href="{{url('/announce/')}}" title="Announce">Annnounce</a></li>
-				<li><a href="{{url('/check/')}}" title="applicants">View Applicants</a></li>
-                <li><a href="{{url('/register/')}}" title="register">Add Staff</a></li>
+				<li class="current"><a href="/" title="home">Home</a></li>
+            <li><a href="{{url('/about/')}}" title="about">About</a></li>
+				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
+				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
+				<li><a href="{{url('/admin_page/')}}" title="dashboard">SYSTEM</a></li>	
 			</ul>
 
-         <a href="{{url('/logout/')}}" title="sign-up" class="button button-primary cta">Logout</a>
+         <a href="{{url('/apply/')}}" title="sign-up" class="button button-primary cta">Apply for Job</a>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
@@ -50,41 +50,39 @@
         <div class="row half-bottom">
 		   <div class="col-seven tab-full">
 
-		      <h1>Register New Staff</h3>
-		      <form method="POST" action="{{route('store.register')}}">
-                @csrf
-                <div>
-			        	<label for="email">Enter Username</label>
-			        	<input class="full-width" type="text" placeholder="New Staff Name" id="name" name="name" autofocus>
-			      </div> 
-			     	<div>
-			        	<label for="email">Enter Email</label>
-			        	<input class="full-width" type="email" placeholder="test@mailbox.com" id="email" name="email" autofocus>
-			      </div> 
-                  <div>
-			        	<label for="password">Enter Password</label>
-			        	<input class="full-width" type="password" placeholder="********" id="password" name="password">
-                        <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> Show Password
-                    </div> 
-                  <div>
-			        	<label for="password">Enter Password</label>
-			        	<select name="role_id" id="roll_id">
-                                   <option value="1">Administrator</option>
-                                    <option value="2">Staff</option>
-                                    <option value="3">User</option>
-                          </select>
-			      </div> 
-                  <input class="button-primary" type="submit" value="Submit">
-                </form>
-            </div>
-            <br><br><br><br>
-            <div class="col-five tab-full">
-		     <aside class="pull-quote">
-				   <blockquote>
-					   <p>The future depends on what you do today.</p>
-                       <cite>Mahatma Gandhi</cite>
-					</blockquote>
-				</aside>
+       <h1>Apply For Job Online</h3>
+
+<form method="POST" action="{{route('store.job')}}" enctype="multipart/form-data">
+      @csrf
+   <div>
+      <label for="title">Enter Your Name</label>
+      <input class="full-width" type="text" placeholder="Enter Your Full Name" id="name" name="name" autofocus>
+  </div> 
+        <div>
+      <label for="Description">Enter Contact No.</label>
+      <input class="full-width" type="number" placeholder="Enter Your Contact Number" id="contact" name="contact">
+  </div> 
+        <div>
+      <label for="Description">Enter The Job Title</label>
+      <input class="full-width" type="text" placeholder="You Can Find the Job Title From Job List in this website" id="posted_by" name="posted_by">
+  </div> 
+
+  <div>
+      <label for="file">Upload Your C.V</label>
+      <input class="full-width" type="file" id="file" name="file">
+  </div>
+
+        <input class="button-primary" type="submit" value="Apply Now">
+      </form>
+  </div>
+  <br><br><br><br>
+  <div class="col-five tab-full">
+<aside class="pull-quote">
+ <blockquote>
+   <p>Find the Perfect Job here at Dsquared.</p>
+             <cite>Devi Maya Thapa, Chairman of Dsquared Group PVT.LTD</cite>
+</blockquote>
+</aside>
 
 </div>
      </div>
@@ -209,3 +207,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+

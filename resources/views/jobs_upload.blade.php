@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>D-Square | System Register</title>
+    <title>D-Square | System Jobs_Upload</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('css/base.css')}}" rel="stylesheet">
     <link href="{{asset('css/vendor.css')}}" rel="stylesheet">
@@ -50,44 +50,41 @@
         <div class="row half-bottom">
 		   <div class="col-seven tab-full">
 
-		      <h1>Register New Staff</h3>
-		      <form method="POST" action="{{route('store.register')}}">
-                @csrf
-                <div>
-			        	<label for="email">Enter Username</label>
-			        	<input class="full-width" type="text" placeholder="New Staff Name" id="name" name="name" autofocus>
-			      </div> 
-			     	<div>
-			        	<label for="email">Enter Email</label>
-			        	<input class="full-width" type="email" placeholder="test@mailbox.com" id="email" name="email" autofocus>
-			      </div> 
-                  <div>
-			        	<label for="password">Enter Password</label>
-			        	<input class="full-width" type="password" placeholder="********" id="password" name="password">
-                        <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> Show Password
-                    </div> 
-                  <div>
-			        	<label for="password">Enter Password</label>
-			        	<select name="role_id" id="roll_id">
-                                   <option value="1">Administrator</option>
-                                    <option value="2">Staff</option>
-                                    <option value="3">User</option>
-                          </select>
-			      </div> 
-                  <input class="button-primary" type="submit" value="Submit">
-                </form>
-            </div>
-            <br><br><br><br>
-            <div class="col-five tab-full">
-		     <aside class="pull-quote">
-				   <blockquote>
-					   <p>The future depends on what you do today.</p>
-                       <cite>Mahatma Gandhi</cite>
-					</blockquote>
-				</aside>
+       <h1>System Job Upload</h3>
 
+<form method="POST" action="{{route('store.job')}}" enctype="multipart/form-data">
+      @csrf
+   <div>
+      <label for="title">Enter Job Title</label>
+      <input class="full-width" type="text" placeholder="Job Vacantion for Romania" id="title" name="title" autofocus>
+  </div> 
+
+  <div>
+      <label for="title">Enter Salary In NPR</label>
+      <input class="full-width" type="text" placeholder="Enter in Ruppes" id="salary" name="salary" autofocus>
+  </div> 
+
+  <div>
+      <label for="title">Enter Position</label>
+      <input class="full-width" type="text" placeholder="Enter Position For job" id="position" name="position" autofocus>
+  </div> 
+
+  <div>
+      <label for="title">Enter Country</label>
+      <input class="full-width" type="text" placeholder="Enter Country For the Job released" id="country" name="country" autofocus>
+  </div> 
+       
+  <div>
+      <label for="title">Expiry Date</label>
+      <input class="full-width" type="date" placeholder="Enter Country For the Job released" id="expiry_date" name="expiry_date" autofocus>
+  </div> 
+  <div>
+      <label for="title">Upload File</label>
+      <input class="full-width" type="file" id="image" name="image" autofocus>
+  </div> 
+  <input class="button-primary" type="submit" value="Apply Now">
+</form>
 </div>
-     </div>
     </section>
     <footer>
 
@@ -209,3 +206,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+

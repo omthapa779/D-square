@@ -37,10 +37,10 @@
             <li><a href="{{url('/about/')}}" title="about">About</a></li>
 				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
 				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
-				<li><a href="{{url('/login/')}}">SYSTEM</a></li>	
+				<li><a href="{{url('/admin_page/')}}">SYSTEM</a></li>	
 			</ul>
 
-         <a href="#" title="sign-up" class="button button-primary cta">Apply for Job</a>
+         <a href="{{url('/apply/')}}" title="sign-up" class="button button-primary cta">Apply for Job</a>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
@@ -67,11 +67,11 @@
                         </h1>
 
                         <div class="buttons" data-aos="fade-up">
-                            <a href="#download" class="smoothscroll button stroke">
+                            <a href="{{url('/apply/')}}" class=" button stroke">
                                 <span class="icon-pen" aria-hidden="true"></span>
                                 Apply For Job
                             </a>
-                            <a href="" data-lity class="button stroke">
+                            <a href="{{url('/jobs/')}}"  class="button stroke">
                                 <span class="icon-search" aria-hidden="true"></span>
                                 Find Job
                             </a>
@@ -197,11 +197,11 @@
 			So if you're ready to take the next step in your career, consider applying for a job through D-Squared today! </p>
 
 			<div class="buttons" data-aos="fade-up">
-                            <a href="#download" class="smoothscroll button stroke">
+                            <a href="#contact_agent" class="smoothscroll button stroke">
                                 <span class="icon-phone" aria-hidden="true"></span>
                                 Contact Agent
                             </a>
-							<a href="#download" class="smoothscroll button stroke">
+							<a href="{{url('/jobs/')}}" class="smoothscroll button stroke">
                                 <span class="icon-search" aria-hidden="true"></span>
                                 Apply online
                             </a>
@@ -236,12 +236,6 @@
                             <a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                         </li>
                     </ul>
@@ -249,20 +243,20 @@
                     
                 </div> <!-- end footer-info -->
 
-                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact" id="contact_agent">
 
                     <h4>Contact</h4>
 
                     <p>
-                    Sambhu Marga, Airport<br>
+                    Sinamangal-9, Airport<br>
                     Kathmandu<br>
                     94043 NP<br>		        
                     </p>
 
                     <p>
                     groupdsquared@gmail.com <br>
-                    Phone: (+63) 555 1212 <br>
-                    Fax: (+63) 555 0100    
+                    Telephone-1: (+977)-1-4495529 <br>
+                    Telephone-2: (+977)-1-4997767   
                     </p>                    
 
                 </div> <!-- end footer-contact -->  
@@ -276,7 +270,7 @@
                         <li><a href="{{url('/about/')}}">About Us</a></li>
                         <li><a href="{{url('/jobs/')}}">Jobs</a></li>
                         <li><a href="{{url('/announcement/')}}">Announcement</a></li>
-                        <li><a href="#">Apply for Job</a></li>
+                        <li><a href="{{url('/apply/')}}">Apply for Job</a></li>
                         <li><a href="{{url('/login/')}}">System</a></li>
                     </ul>	      		
                             

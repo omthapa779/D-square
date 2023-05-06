@@ -23,10 +23,18 @@ Route::get('/register', [\App\Http\Controllers\LoginController::class, 'create_u
 Route::post('/register', [\App\Http\Controllers\LoginController::class, 'store_user'])->name("store.register");
 Route::get('/admin_page', [\App\Http\Controllers\LoginController::class, 'admin_page']);
 Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+Route::get('/announce', [\App\Http\Controllers\LoginController::class, 'Announce'])->name('Announce');
+Route::post('/announce', [\App\Http\Controllers\LoginController::class, 'make_announcement'])->name("store.announce");
+Route::get('/jobs_upload', [\App\Http\Controllers\LoginController::class, 'jobs_upload'])->name('jobs_upload');
+Route::post('/jobs_upload', [\App\Http\Controllers\LoginController::class, 'store_job'])->name("store.job");
+Route::get('/check', [\App\Http\Controllers\LoginController::class, 'check'])->name('check');
 
 });
 
-
+Route::get('/apply', [\App\Http\Controllers\LoginController::class, 'apply'])->name('apply');
+Route::post('/apply', [\App\Http\Controllers\LoginController::class, 'store_apply'])->name("store.apply");
+Route::get('/jobs', [\App\Http\Controllers\LoginController::class, 'jobs'])->name('jobs');
+Route::get('/announcement', [\App\Http\Controllers\LoginController::class, 'Announcement'])->name('Announcement');
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'store_login'])->name("store.login");
 

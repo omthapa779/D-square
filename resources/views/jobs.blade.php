@@ -36,15 +36,36 @@
             <li><a href="{{url('/about/')}}" title="about">About</a></li>
 				<li><a href="{{url('/jobs/')}}" title="jobs">Jobs</a></li>
 				<li><a href="{{url('/announcement/')}}" title="announcement">Announcements</a></li>
-				<li><a class="smoothscroll"  href="{{url('/dashboard/')}}" title="dashboard">SYSTEM</a></li>	
+				<li><a href="{{url('/admin_page/')}}" title="dashboard">SYSTEM</a></li>	
 			</ul>
 
-         <a href="#" title="sign-up" class="button button-primary cta">Apply for Job</a>
+         <a href="{{url('/apply/')}}" title="sign-up" class="button button-primary cta">Apply for Job</a>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
    	
 	</header>
+  
+    <section id="about">
+   <div class="row about-how">
+          
+            <h1 class="intro-header" data-aos="fade-up">Recent Jobs</h1>           
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps block-1-2 block-tab-full group">
+                @foreach ($Photo as $Photo)
+                    <div class="bgrid step" data-item="{{ $Photo->job_id }}">
+                        <h3>{{$Photo->title}}</h3>
+                        <p>{{$Photo->description}}</p> 
+                        <h5>Posted by: {{$Photo->posted_by}}</h5>
+                        <h5>Posted Date: {{$Photo->created_at}}</h5>
+                    </div>
+                    @endforeach
+                </div>           
+           </div> <!-- end about-how-content -->
+
+        </div> <!-- end about-how -->
+   </section>
 
 
     <div id="preloader"> 

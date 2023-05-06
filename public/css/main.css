@@ -1834,7 +1834,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #about {
   min-height: 786px;
   background: #ffffff;
-  padding-top: 18rem;
+  padding-top: 10rem;
   overflow: hidden;
 }
 
@@ -2856,26 +2856,5 @@ footer ul a:visited {
   }
 }
 
-.jobs_animation{
-  src: url(../images/jobs/mason.jpg);
-  animation: job_animation_change 10s infinite;
-}
-@keyframes job_animation_change {
-  0%{
-    src: url(../images/jobs/mason.jpg);
-  }
-  25%{
-    src: url(../images/jobs/cleaner.png);
-  }
-  50%{
-    src: url(../images/jobs/mason.jpg);
-  }
-  75%{
-    src: url(../images/jobs/mason.jpg);
-  }
-  100%{
-    src: url(../images/jobs/mason.jpg);
-  }
-}
 
 /*# sourceMappingURL=main.css.map */
