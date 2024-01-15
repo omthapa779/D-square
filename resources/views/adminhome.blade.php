@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,25 +7,36 @@
     <title>D-Square | System DashBoard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('css/base.css')}}" rel="stylesheet">
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>D-Squared | Dashboard </title>
+    <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="{{asset('css/base.css')}}" rel="stylesheet">
     <link href="{{asset('css/vendor.css')}}" rel="stylesheet">
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
     <style type="text/css" media="screen">
-      #styles { 
+      #styles {
 
    	    background: white;
    		 padding-top: 15rem;
-   		 padding-bottom: 12rem;   	
-   	}      	
-   </style>  
+   		 padding-bottom: 12rem;
+   	}
+   </style>
 
 <script src="{{asset('js/modernizr.js')}}"></script>
    <script src="{{asset('js/pace.min.js')}}"></script>
 
 </head>
 <body id="top">
-    <!-- header 
+    <!-- header
    ================================================== -->
-   <header id="header" class="row">   
+   <header id="header" class="row">
 
 		<div class="header-logo">
 	   	<a href="/">D-Squared</a>
@@ -42,19 +54,19 @@
          <a href="{{url('/logout/')}}" title="sign-up" class="button button-primary cta">Logout</a>
 		</nav>
 
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
+		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
 	</header>
-    
+
     <section id="about">
    <div class="row about-how">
-   <h1 class="intro-header" data-aos="fade-up">Dashboard</h1>   
+   <h1 class="intro-header" data-aos="fade-up">Dashboard</h1>
             <div class="about-how-content" data-aos="fade-up">
                 <div class="about-how-steps block-1-2 block-tab-full group">
                 @foreach ($announced as $announced)
                     <div class="bgrid step" data-item="{{ $announced->announce_id }}">
                         <h3>{{$announced->title}}</h3>
-                        <p>{{$announced->description}}</p> 
+                        <p>{{$announced->description}}</p>
                         <h5>Posted by: {{$announced->posted_by}}</h5>
                         <h5>Posted Date: {{$announced->created_at}}</h5>
                     </div>
@@ -69,7 +81,7 @@
                         <h5>Posted by: {{$Photo->posted_by}}</h5>
                      </div>
                     @endforeach
-                </div>           
+                </div>
            </div> <!-- end about-how-content -->
 
         </div> <!-- end about-how -->
@@ -78,9 +90,9 @@
     <footer>
 
 <div class="footer-main">
-    <div class="row">  
+    <div class="row">
 
-        <div class="col-three md-1-3 tab-full footer-info">            
+        <div class="col-three md-1-3 tab-full footer-info">
 
             <div class="footer-logo"></div>
 
@@ -99,8 +111,8 @@
                     <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul>
-            
-            
+
+
         </div> <!-- end footer-info -->
 
         <div class="col-three md-1-3 tab-1-2 mob-full footer-contact" id="contact_agent">
@@ -110,16 +122,16 @@
             <p>
             Sinamangal-9, Airport<br>
             Kathmandu<br>
-            94043 NP<br>		        
+            94043 NP<br>
             </p>
 
             <p>
             groupdsquared@gmail.com <br>
             Telephone-1: (+977)-1-4495529 <br>
-            Telephone-2: (+977)-1-4997767   
-            </p>                    
+            Telephone-2: (+977)-1-4997767
+            </p>
 
-        </div> <!-- end footer-contact -->  
+        </div> <!-- end footer-contact -->
 
         <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
 
@@ -132,9 +144,9 @@
                 <li><a href="{{url('/announcement/')}}">Announcement</a></li>
                 <li><a href="{{url('/apply/')}}">Apply for Job</a></li>
                 <li><a href="{{url('/login/')}}">System</a></li>
-            </ul>	      		
-                    
-        </div> <!-- end footer-site-links --> 
+            </ul>
+
+        </div> <!-- end footer-site-links -->
 
         <div class="col-four md-1-2 tab-full footer-subscribe">
 
@@ -143,20 +155,20 @@
             <p>Leave Your E-mail Here! We will Email The Process Back!</p>
 
             <div class="subscribe-form">
-        
+
                 <form id="mc-form" class="group" novalidate="true">
 
-                    <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required=""> 
-        
+                    <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+
                     <input type="submit" name="subscribe" value="Send">
-        
+
                     <label for="mc-email" class="subscribe-message"></label>
-        
+
                 </form>
 
-            </div>	      		
-                    
-        </div> <!-- end footer-subscribe -->         
+            </div>
+
+        </div> <!-- end footer-subscribe -->
 
     </div> <!-- /row -->
 </div> <!-- end footer-main -->
@@ -168,25 +180,26 @@
 
       <div class="col-twelve">
           <div class="copyright">
-             <span>Be Happy</span> 
-             <span>Created by <a href="#">S.W.A.M.P</a></span>		         	
+             <span>Be Happy</span>
+             <span>Created by <a href="#">S.W.A.M.P</a></span>
          </div>
 
          <div id="go-top">
             <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
-         </div>         
+         </div>
       </div>
 
-  </div> <!-- end footer-bottom -->     	
+  </div> <!-- end footer-bottom -->
 
 </div>
+
 
 </footer>
 
 
-<div id="preloader"> 
+<div id="preloader">
     	<div id="loader"></div>
-    </div>  
+    </div>
 
     <!-- Java Script
     ================================================== -->
@@ -195,4 +208,11 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+<!-- Page content -->
+<div class="content">
+
+</div>
+  </body>
 
